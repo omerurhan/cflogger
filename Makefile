@@ -40,10 +40,6 @@ test:
 	$(GOTEST) $(GOBUILDFLAGS) -mod readonly -v ./...
 	# test ok
 
-proto:
-	proto/gen.sh
-	# proto ok
-
 vendor:
 	$(GOMOD) download
 	$(GOMOD) vendor
@@ -61,7 +57,6 @@ help: Makefile
 	@echo "    clean"
 	@echo "    clean-all"
 	@echo "    test"
-	@echo "    proto"
 	@echo "    vendor"
 	@echo "    vendor-clean"
 	@echo "    help"
