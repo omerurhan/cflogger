@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Resources:
+  SampleInstance:
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: <your_ami>
+      InstanceType: t3.micro
+      KeyName: <your_key>
+  SampleInstance2:
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: <your_ami>
+      InstanceType: t2.micro
+      KeyName: <your_key>
