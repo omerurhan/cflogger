@@ -7,9 +7,6 @@ GOMOD := $(GOCMD) mod
 GOTEST := $(GOCMD) test
 GOGET := $(GOCMD) get
 
-OS := $(shell uname | tr '[:upper:]' '[:lower:]')
-ARCH := $(shell uname -m | tr '[:upper:]' '[:lower:]')
-
 PROJECTNAME := cflogger
 VERSION := $(shell git describe --tags --always)
 BUILD := $(shell git rev-parse --short HEAD)
@@ -24,7 +21,7 @@ all: clean build
 
 build:
 	mkdir -p target/
-	CGO_ENABLED=1 $(GOBUILD) $(GOBUILDFLAGS) -mod readonly -v -o target/cflogger main.go
+	GOOS=${OS} GOARCH=${ARCH} $(GOBUILD) $(GOBUILDFLAGS) -mod readonly -v -o target/cflogger main.go
 	# build ok
 
 clean:

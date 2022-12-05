@@ -43,6 +43,12 @@ Shared Credentials file (**~/.aws/credentials**) - This file stores your credent
 $ git clone https://github.com/omerurhan/cflogger.git
 $ cd cflogger
 
+# Set OS, ARCH environment variables for build. 
+# Example linux, amd64.
+export OS=linux
+export ARCH=amd64
+
+
 # Build the binary according to your operating system.
 $ make all
 
