@@ -6,6 +6,9 @@
 **cflogger** CloudFormation streaming logger for stack events.
 It logs single stack events in given time. Not gives all events history.
 Suitable for tracking stack build processes in ci/cd pipelines.
+
+Here's a **`cflogger`** demo:
+![cflogger demo GIF](img/cflogger.gif)
 ## Examples
 > **Warning**
 > You must set AWS region. Otherwise you get error.
@@ -53,5 +56,5 @@ export ARCH=amd64
 $ make all
 
 # Copy convenient location and run. 
-$ cp target/cflogger /usr/local/bin 
+$ cp -a target/cflogger /usr/local/bin 
 ```
